@@ -77,39 +77,24 @@ if (!es_igual(nombre_ingresado, nombre_usuario) || !es_igual(contraseña_ingresa
 }
 const usuario1 = new User(nombre_ingresado, 176322);
 
-const productos_guitarras = [];
-productos_guitarras.push(new Producto("Guitarra eléctrica Classic Sunburst", "Les Paul", "Gibson", 17000));
-productos_guitarras.push(new Producto("Guitarra eléctrica American Performer", "Stratocaster", "Fender", 115000));
-productos_guitarras.push(new Producto("Guitarra eléctrica Rga622xh-bk", "Super Stratocaster", "Ibanez", 91000));
-
-const productos_teclados = [];
-productos_teclados.push(new Producto("Órgano", "Ctx800", "Casio", 17000));
-productos_teclados.push(new Producto("Órgano", "Go Keys 5", "Roland", 42500));
-productos_teclados.push(new Producto("Órgano", "Psrsx700", "Yamaha", 98500));
-for (const iva of productos_guitarras) {
+const productos= [];
+productos.push(new Producto("Guitarra eléctrica Classic Sunburst", "Les Paul", "Gibson", 17000));
+productos.push(new Producto("Guitarra eléctrica American Performer", "Stratocaster", "Fender", 115000));
+productos.push(new Producto("Guitarra eléctrica Rga622xh-bk", "Super Stratocaster", "Ibanez", 91000));
+productos.push(new Producto("Órgano", "Ctx800", "Casio", 17000));
+productos.push(new Producto("Órgano", "Go Keys 5", "Roland", 42500));
+productos.push(new Producto("Órgano", "Psrsx700", "Yamaha", 98500));
+for (const iva of productos) {
     iva.sumaIva();
 }
-for (const iva of productos_teclados) {
-    iva.sumaIva();
-}
-
 
 let ver_cuenta_productos = prompt("Si quiere ver el estado de su cuenta, ingrese `Cuenta`. Si quiere consultar por nuestros productos, ingrese `Productos`");
 
 if (ver_cuenta_productos.toLowerCase() == "cuenta") {
     alert("Nombre de Usuario: " + usuario1.nombre_de_usuario + "  ID: " + usuario1.id + "  Saldo: $" + usuario1.saldo_pesos)
 } else if (ver_cuenta_productos.toLowerCase() == "productos") {
-    let mensajeProductos = prompt("Para ver nuestro catalogo de guitarras, ingrese `Guitarras`. Para ver nuestro catalogo de teclados, ingrese `Teclados`");
-    if (mensajeProductos.toLowerCase() == "guitarras") {
-        for (const producto of productos_guitarras) {
-            alert("Nombre: " + producto.nombre + "\nModelo: " + producto.modelo + "\nMarca: " + producto.marca + "\nPrecio: $" + producto.precio);
-        }
-    } else if (mensajeProductos.toLowerCase() == "teclados") {
-        for (const producto of productos_teclados) {
-            alert("Nombre: " + producto.nombre + "\nModelo: " + producto.modelo + "\nMarca: " + producto.marca + "\nPrecio: $" + producto.precio);
-        }
-    } else {
-        alert("Catalogo no encontrado, intentelo de nuevo");
+    for (const producto of productos) {
+        alert("Nombre: " + producto.nombre + "\nModelo: " + producto.modelo + "\nMarca: " + producto.marca + "\nPrecio: $" + producto.precio);
     }
 } else {
     alert("Opción invalida")
@@ -117,14 +102,14 @@ if (ver_cuenta_productos.toLowerCase() == "cuenta") {
 
 let nombreProductoUsuario = prompt("Ingrese el nombre del producto que desea buscar:");
 
-let productoUsuario = productos_guitarras.filter(producto => 
+let productoUsuario = productos.filter(producto => 
     producto.nombre.toLowerCase().includes(nombreProductoUsuario.toLowerCase())
 );
 
 if (productoUsuario.length > 0) {
 
-    productoUsuario.forEach(guitarra => {
-        alert("Nombre: " + guitarra.nombre + "\nMarca: " + guitarra.marca + "\nPrecio: $" + guitarra.precio);
+    productoUsuario.forEach(producto => {
+        alert("Nombre: " + producto.nombre + "\nMarca: " + producto.marca + "\nPrecio: $" + producto.precio);
     });
 } else {
     alert("No se encontraron productos con ese nombre");
