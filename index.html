@@ -1,77 +1,85 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <title>CostaMusic</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/concrete-mixer.png">
-    <title>CostaMusic</title>
 </head>
 <body>
     <header>
         <div>
             <div class="header-item-1">
-                <p>Número telefonico</p>
-                <img src="./img/phone-call.png" alt="">
+                <p>Número telefónico</p>
+                <img src="./img/phone-call.png" alt="Teléfono">
             </div>
             <div class="header-item-2">
                 <p>Horarios</p>
-                <img src="./img/clock.png" alt="">
+                <img src="./img/clock.png" alt="Reloj">
             </div>
             <div class="header-item-3">
                 <p>Ubicación</p>
-                <img src="./img/land-layer-location.png" alt="">
+                <img src="./img/land-layer-location.png" alt="Ubicación">
             </div>
         </div>
         <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active nav-home" aria-current="page" href="#">CostaMusic</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Articulos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Servicios</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="./pages/cuenta.html">Cuenta</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link active nav-home" aria-current="page" href="./index.html">CostaMusic</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Artículos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
         </ul>
     </header>
     <main>
         <section class="hero">
-            <h1>Bienvenidos a CostaMusic</h1>
-            <h2>Vive el arte</h2>
+            <div id="registro">
+                <h2>Registro</h2>
+                <input type="text" id="nombre_usuario" placeholder="Nombre de usuario" class="form-control mb-2">
+                <input type="password" id="contraseña" placeholder="Contraseña" class="form-control mb-2">
+                <button class="btn btn-primary" onclick="registrarUsuario()">Registrar</button>
+            </div>
+            <div id="inicio_sesion" class="display_none">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="nombre_ingresado" placeholder="Nombre de usuario" class="form-control mb-2">
+                <input type="password" id="contraseña_ingresada" placeholder="Contraseña" class="form-control mb-2">
+                <button class="btn btn-success" onclick="iniciarSesion()">Iniciar Sesión</button>
+            </div>
+            <div id="opciones_usuario" class="display_none">
+                <h2>Opciones</h2>
+                <button id="btn_ver_cuenta" class="btn btn-info">Ver Cuenta</button>
+                <button id="btn_ver_productos" class="btn btn-info">Ver Productos</button>
+            </div>
+            <div id="informacion_cuenta" class="display_none">
+                <h3>Información de la Cuenta</h3>
+                <p id="datos_cuenta"></p>
+                <button class="btn btn-warning" onclick="depositarSaldo()">Depositar</button>
+            </div>
+            <div id="productos_lista" class="display_none"></div>
         </section>
+        <!---
         <section class="productos">
             <div>
-            </div>
-            <div>
-                <div>
                 <article>
                     <img src="" alt="">
                     <h3></h3>
-                    <p><a href=""></a></p>
+                    <p><a href="#"></a></p>
                 </article>
                 <article>
                     <img src="" alt="">
                     <h3></h3>
-                    <p><a href=""></a></p>
+                    <p><a href="#"></a></p>
                 </article>
-            </div>
             </div>
         </section>
+        -->
     </main>
     <footer>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-        <script src="./js/main.js"></script>
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
