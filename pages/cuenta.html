@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <title>CostaMusic</title>
+</head>
+
+<body>
+    <header id="header" class="encabezado">
+        <h1>CostaMusic</h1>
+        <nav class="navbar navbar-expand-lg fondo-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cuenta.html">Cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">Productos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="registro" class="hero-cuenta">
+            <h2>Registro</h2>
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nombre_usuario" placeholder="Nombre de usuario">
+                    <label for="nombre_usuario">Nombre de Usuario</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+                    <label for="contraseña">Contraseña</label>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnRegis">Registrarse</button>
+                <button type="button" class="btn btn-secondary" id="btnIrInicioSesion">Iniciar Sesión</button>
+            </form>
+        </section>
+        <section id="inicio_sesion" class="display_none hero-cuenta">
+            <h2>Inicio de Sesión</h2>
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nombre_ingresado" placeholder="Nombre de usuario">
+                    <label for="nombre_ingresado">Nombre de usuario</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="contraseña_ingresada" placeholder="Contraseña">
+                    <label for="contraseña_ingresada">Contraseña</label>
+                </div>
+                <button type="button" class="btn btn-success" id="botonIniSesion">Iniciar Sesión</button>
+                <button type="button" class="btn btn-secondary" id="botonIrRegistro">Registrarse</button>
+            </form>
+        </section>
+        <section id="opciones_usuario" class="display_none hero-cuenta">
+            <h2>Opciones</h2>
+            <button id="btn_ver_cuenta" class="btn btn-info">Ver Cuenta</button>
+            <div id="informacion_cuenta" class="display_none">
+                <h2>Información de Cuenta</h2>
+                <div id="datos_cuenta"></div>
+                <button type="button" class="btn btn-warning" id="depositar">Depositar Saldo</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-contacto">
+        <h3>CostaMusic</h3>
+        <div class="footer-contenedor-iconos">
+            <h5>Sigue a CostaMusic en</h5>
+            <div class="iconos">
+                <a href="https://www.facebook.com" target="_blank"><img src="../img/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../img/instagram.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

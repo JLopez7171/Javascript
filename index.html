@@ -1,85 +1,148 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>CostaMusic</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./img/concrete-mixer.png">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
-    <header>
-        <div>
-            <div class="header-item-1">
-                <p>Número telefónico</p>
-                <img src="./img/phone-call.png" alt="Teléfono">
+    <header id="header" class="encabezado">
+        <h1>CostaMusic</h1>
+        <nav class="navbar navbar-expand-lg fondo-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/cuenta.html">Cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/productos.html">Productos</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="header-item-2">
-                <p>Horarios</p>
-                <img src="./img/clock.png" alt="Reloj">
-            </div>
-            <div class="header-item-3">
-                <p>Ubicación</p>
-                <img src="./img/land-layer-location.png" alt="Ubicación">
-            </div>
-        </div>
-        <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="./pages/cuenta.html">Cuenta</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-            <li class="nav-item"><a class="nav-link active nav-home" aria-current="page" href="./index.html">CostaMusic</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Artículos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-        </ul>
     </header>
     <main>
         <section class="hero">
-            <div id="registro">
-                <h2>Registro</h2>
-                <input type="text" id="nombre_usuario" placeholder="Nombre de usuario" class="form-control mb-2">
-                <input type="password" id="contraseña" placeholder="Contraseña" class="form-control mb-2">
-                <button class="btn btn-primary" onclick="registrarUsuario()">Registrar</button>
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/fondo-hero.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Bienvenidos a CostaMusic</h2>
+                            <h3>El futuro del arte está en tus manos.</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/fondo-hero2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Bienvenidos a CostaMusic</h2>
+                            <h3>El futuro del arte está en tus manos.</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/fondo-hero3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Bienvenidos a CostaMusic</h2>
+                            <h3>El futuro del arte está en tus manos.</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div id="inicio_sesion" class="display_none">
-                <h2>Iniciar Sesión</h2>
-                <input type="text" id="nombre_ingresado" placeholder="Nombre de usuario" class="form-control mb-2">
-                <input type="password" id="contraseña_ingresada" placeholder="Contraseña" class="form-control mb-2">
-                <button class="btn btn-success" onclick="iniciarSesion()">Iniciar Sesión</button>
-            </div>
-            <div id="opciones_usuario" class="display_none">
-                <h2>Opciones</h2>
-                <button id="btn_ver_cuenta" class="btn btn-info">Ver Cuenta</button>
-                <button id="btn_ver_productos" class="btn btn-info">Ver Productos</button>
-            </div>
-            <div id="informacion_cuenta" class="display_none">
-                <h3>Información de la Cuenta</h3>
-                <p id="datos_cuenta"></p>
-                <button class="btn btn-warning" onclick="depositarSaldo()">Depositar</button>
-            </div>
-            <div id="productos_lista" class="display_none"></div>
         </section>
-        <!---
         <section class="productos">
-            <div>
-                <article>
-                    <img src="" alt="">
-                    <h3></h3>
-                    <p><a href="#"></a></p>
-                </article>
-                <article>
-                    <img src="" alt="">
-                    <h3></h3>
-                    <p><a href="#"></a></p>
-                </article>
+            <h2>Nuestros mejores Instrumentos</h2>
+            <div class="productos-contenedor">
+                <div class="guitarra-producto">
+                    <img src="./img/guitarra-producto.jpg" alt="">
+                    <h3>Guitarras y Bajos</h3>
+                    <p><a href="">Más información</a></p>
+                </div>
+                <div class="teclado-producto">
+                    <img src="./img/teclado-producto.jpg" alt="">
+                    <h3>Teclados</h3>
+                    <p><a href="">Más información</a></p>
+                </div>
+                <div class="percusion-producto">
+                    <img src="./img/bateria-producto.jpg" alt="">
+                    <h3>Percusión</h3>
+                    <p><a href=".">Más información</a></p>
+                </div>
             </div>
         </section>
-        -->
+        <section class="catalogo">
+            <h2>Catálogo</h2>
+            <div class="contenedor-grilla">
+                <div class="img-1">
+                    <img src="./img/piano-catalogo.jpg" alt="">
+                    <h3>Piano</h3>
+                </div>
+                <div class="img-2">
+                    <img src="./img/bajo-catalogo.jpg" alt="">
+                    <h3>Bajo eléctrico</h3>
+                </div>
+                <div class="img-3">
+                    <img src="./img/guitarra-electrica-catalogo.jpg" alt="">
+                    <h3>Guitarra eléctrica</h3>
+                </div>
+                <div class="img-4">
+                    <img src="./img/bateria-catalogo.jpg" alt="">
+                    <h3>Bateria</h3>
+                </div>
+                <div class="img-5">
+                    <img src="./img/tambor-catalogo.jpg" alt="">
+                    <h3>Tambor</h3>
+                </div>
+                <div class="img-6">
+                    <img src="./img/sintetizador-catalogo.jpg" alt="">
+                    <h3>Sintetizador</h3>
+                </div>
+            </div>
+        </section>
+        <a href="#header" class="ir-arriba"><img src="./img/up-arrow.png" alt=""></a>
     </main>
     <footer>
+        <h3>CostaMusic</h3>
+        <div class="footer-contenedor-iconos">
+            <h5>Sigue a CostaMusic en</h5>
+            <div class="iconos">
+                <a href="https://www.facebook.com" target="_blank"><img src="./img/facebook.png" alt=""></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="./img/instagram.png" alt=""></a>
+            </div>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
